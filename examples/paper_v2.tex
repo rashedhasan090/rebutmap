@@ -1,0 +1,35 @@
+\documentclass{article}
+\begin{document}
+\section{Introduction}
+Agents call tools in long sequences, and failures are hard to trace back to their cause.
+
+\section{Related Work}
+Tracing systems for distributed services record spans and parent links~\cite{dapper}.
+Unlike prior tracing systems, our approach reconstructs causal links between tool calls offline,
+without instrumenting the agent.
+
+\section{Method}
+\subsection{Trace model}
+We model a run as a directed graph of tool calls.
+\begin{figure}
+  \centering
+  \caption{Overview of the pipeline.}
+  \label{fig:overview}
+\end{figure}
+
+\section{Evaluation}
+We evaluate on three datasets, including a new set of 400 long-horizon traces.
+\begin{table}\caption{Datasets.}\label{tab:data}\end{table}
+\begin{table}\caption{Main results.}\label{tab:main}\end{table}
+\begin{table}\caption{Ablation of the retrieval component.}\label{tab:ablation}\end{table}
+
+\section{Threats to Validity}
+Our benchmark tasks were sampled from public repositories. Results may not transfer to private code.
+
+\section{Conclusion}
+We presented a causal tracer for agent runs.
+
+\appendix
+\section{Scaling experiment}
+Runtime grows linearly up to 50,000 events.
+\end{document}

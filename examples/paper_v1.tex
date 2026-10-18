@@ -1,0 +1,28 @@
+\documentclass{article}
+\begin{document}
+\section{Introduction}
+Agents call tools in long sequences, and failures are hard to trace back to their cause.
+
+\section{Related Work}
+Tracing systems for distributed services record spans and parent links~\cite{dapper}.
+
+\section{Method}
+\subsection{Trace model}
+We model a run as a directed graph of tool calls.
+\begin{figure}
+  \centering
+  \caption{Overview of the pipeline.}
+  \label{fig:overview}
+\end{figure}
+
+\section{Evaluation}
+We evaluate on two datasets.
+\begin{table}\caption{Datasets.}\label{tab:data}\end{table}
+\begin{table}\caption{Main results.}\label{tab:main}\end{table}
+
+\section{Threats to Validity}
+Our benchmark tasks were sampled from public repositories. Results may not transfer to private code.
+
+\section{Conclusion}
+We presented a causal tracer for agent runs.
+\end{document}
